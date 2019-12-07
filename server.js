@@ -5,7 +5,7 @@ const app = express();
 
 app.use(express.static('./public'));
 
-
+app.get('/web')
 
 //routes are the address/locations/endpoints that respond to a request 
 
@@ -26,8 +26,8 @@ app.get('/melokisses',function(request, response){
 
 
 
-
-app.listen(3000,function(){
+const PORT = process.env.PORT || 3000;
+app.listen(PORT,function(){
     console.log('good job Yihang');
 
 });
